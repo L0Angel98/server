@@ -13,4 +13,12 @@ testRouter.post("/", (req, res, next) => {
   }
 });
 
+testRouter.get("/", (req, res, next) => {
+  console.log(req);
+  res.status(200).send({
+      success: true,
+      message: "Post created successfully"
+    });
+});
+
 module.exports = testRouter;
